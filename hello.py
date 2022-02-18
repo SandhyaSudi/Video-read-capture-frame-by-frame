@@ -2,7 +2,9 @@ import cv2
 import numpy as np
 import time
 
-#cap = cv2.VideoCapture(r"C:\Users\Sandhya Sudi\Desktop\python\fan1.mp4")
+#cap = cv2.VideoCapture(r"C:\Users\Sandhya Sudi\Desktop\python\fan1.mp4")- vidoe pth
+
+#Calculating the fps of the video
 if __name__ == '__main__' :
     cap = cv2.VideoCapture(r"C:\Users\Sandhya Sudi\Desktop\python\fan1.mp4")
     i=0
@@ -21,7 +23,7 @@ if __name__ == '__main__' :
 
     
 
-
+# displaying the video and capturing and saving frames .
 while(True):
     ret, frame=cap.read()
     cv2.imshow('output',frame)
@@ -33,8 +35,7 @@ while(True):
         # writing the extracted images
         cv2.imwrite(name, frame)
   
-        # increasing counter so that it will
-        # show how many frames are created
+        
         i += 1
         
     if (cv2.waitKey(1) & 0xFF == ord('q')):
